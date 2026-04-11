@@ -1,3 +1,146 @@
-<!-- your html code here -->
-<p>Hello, I'm the services.html</p>
-<p>Hello, I'm the services section and I was loaded using ajax from templates/services.html</p>
+<!-- estilos -->
+<style>
+    .bloque {
+        border-radius: 20px;
+    }
+    .contenedor-img {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    .img {
+        width: 35%;
+        justify-content: center;
+    }
+    .img-2 {
+        width: 70%;
+    }
+    .img-especial {
+        width: 45%;
+    }
+    .cajon-texto {
+        display: flex;
+        align-items: center;
+        margin-left: 25px;
+    }
+    .texto {
+        display: flex;
+        align-items: end;
+        margin-top: auto;
+        margin-left: 10px;
+    }
+</style>
+<!-- estructura -->
+<div class="bloque-general">
+    <!-- primera fila -->
+     <div class="d-flex justify-content-center gap-3 mb-3">
+        <button id="btn-marcarTodos" class="btn btn-success rounded-pill">Marcar todos como favoritos</button>
+        <button id="btn-reset" class="btn btn-danger rounded-pill">Desmarcar todos los favoritos</button>
+     </div>
+    <div class="row justify-content-evenly mb-4">
+        <div class="bloque col-3 bg-dark">
+            <div class="contenedor-img">
+                <img class="img" src="/website/assets/img/imagenesServices/earphone-cutout.png" alt="earphone">
+            </div>
+            <div class="texto">
+                <div>
+                    <p class="fs-6 text-white mb-0 lh-1">Disfruta</p>
+                    <p class="fs-3 text-white mb-0 lh-1">con nuestros</p>
+                    <p class="fs-1 text-white mb-4 lh-1">Earphone</p>
+                    <button id="btn-earphone" class="btn btn-danger btn-outline-dark rounded-pill mb-3">Añadir a favoritos</button>
+                </div>
+            </div>
+        </div>
+        <div class="bloque col-3 bg-warning">
+            <div class="contenedor-img">
+               <img class="img" src="/website/assets/img/imagenesServices/smartwatch-cutout.png" alt="smartwatch">
+            </div>
+            <div class="texto">
+                <div>
+                    <p class="fs-6 text-white mb-0 lh-1">Disfruta</p>
+                    <p class="fs-3 text-white mb-0 lh-1">con nuestros</p>
+                    <p class="fs-1 text-white mb-4 lh-1">Smart Watches</p>
+                    <button id="btn-smartwatch" class="btn btn-light btn-outline-warning rounded-pill mb-3">Añadir a favoritos</button>
+                </div>
+            </div>
+        </div>
+        <div class="bloque col-5 bg-danger">
+            <div class="row">
+                <div class="col-5 cajon-texto">
+                    <div>
+                        <p class="fs-6 text-white mb-0 lh-1">Disfruta</p>
+                        <p class="fs-3 text-white mb-0 lh-1">con nuestros</p>
+                        <p class="fs-1 text-white mb-4 lh-1">Portatiles</p>
+                        <button id="btn-portatiles" class="btn btn-light btn-outline-danger rounded-pill mb-3">Añadir a favoritos</button>
+                    </div>
+                </div>
+                <div class="contenedor-img col-6">
+                    <img class="img-2" src="/website/assets/img/imagenesServices/laptop-cutout.png" alt="laptop">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- segunda fila -->
+    <div class="row justify-content-evenly mb-5">
+        <div class="bloque col-5 bg-dark bg-opacity-10">
+            <div class="row">
+                <div class="col-5 cajon-texto">
+                    <div>
+                        <p class="fs-6 text-dark mb-0 lh-1">Disfruta</p>
+                        <p class="fs-3 text-dark mb-0 lh-1">con nuestras</p>
+                        <p class="fs-1 text-dark mb-4 lh-1">Consolas</p>
+                        <button id="btn-consolas" class="btn btn-danger btn-outline-light rounded-pill mb-3">Añadir a favoritos</button>
+                    </div>
+                </div>
+                <div class="contenedor-img col-6">
+                    <img class="img-2" src="/website/assets/img/imagenesServices/ps5-cutout.png" alt="ps5">
+                </div>
+            </div>
+        </div>
+        <div class="bloque col-3 bg-success">
+            <div class="contenedor-img">
+                <img class="img-especial" src="/website/assets/img/imagenesServices/oculus-cutout.png" alt="oculus">
+            </div>
+            <div class="texto">
+                <div>
+                    <p class="fs-6 text-white mb-0 lh-1">Disfruta</p>
+                    <p class="fs-3 text-white mb-0 lh-1">con nuestras</p>
+                    <p class="fs-1 text-white mb-4 lh-1">Oculus game</p>
+                    <button id="btn-oculus" class="btn btn-light btn-outline-success rounded-pill mb-3">Añadir a favoritos</button>
+                </div>
+            </div>
+        </div>
+        <div class="bloque col-3 bg-primary">
+            <div class="contenedor-img">
+                <img class="img" src="/website/assets/img/imagenesServices/speaker-cutout.png" alt="speaker">
+            </div>
+            <div class="texto">
+                <div>
+                    <p class="fs-6 text-white mb-0 lh-1">Disfruta</p>
+                    <p class="fs-3 text-white mb-0 lh-1">con nuestros</p>
+                    <p class="fs-1 text-white mb-4 lh-1">Altavoces</p>
+                    <button id="btn-altavoces" class="btn btn-light btn-outline-primary rounded-pill mb-3">Añadir a favoritos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- tercera fila -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-3 d-flex justify-content-center align-items-center gap-3">
+            <i class="icono fa-solid fa-truck-fast fs-1"></i>
+            <p class="mb-0">Envio gratis</p>
+        </div>
+        <div class="col-3 d-flex justify-content-center align-items-center gap-3">
+            <i class="icono fa-solid fa-circle-check fs-1"></i>
+            <p class="mb-0">Garantía de dinero</p>
+        </div>
+        <div class="col-3 d-flex justify-content-center align-items-center gap-3">
+            <i class="icono fa-solid fa-headset fs-1"></i>
+            <p class="mb-0">Soporte online 24/7</p>
+        </div>
+        <div class="col-3 d-flex justify-content-center align-items-center gap-3">
+            <i class="icono fa-duotone fa-solid fa-credit-card fs-1"></i>
+            <p class="mb-0">Pagos seguros</p>
+        </div>
+    </div>
+</div>
